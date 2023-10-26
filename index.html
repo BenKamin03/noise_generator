@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Noise Generator</title>
+    <meta name="descrption" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav_bar">
+        <input type="radio" name="noise" id="white_noise" value="white_noise" checked="checked">
+        <label for="white_noise">White Noise</label>
+
+        <input type="radio" name="noise" id="worley_noise" value="worley_noise">
+        <label for="worley_noise">Worley Noise</label>
+
+        <input type="radio" name="noise" id="perlin_noise" value="perlin_noise">
+        <label for="perlin_noise">Perlin Noise</label>
+
+        <input type="radio" name="noise" id="value_noise" value="value_noise">
+        <label for="value_noise">Value Noise</label>
+    </div>
+
+    <div class="rgb_select">
+        <label class="container">
+            <input type="checkbox" checked="checked" id="color_red">
+            <span class="checkmark color_red"></span>
+        </label>
+        <label class="container">
+            <input type="checkbox" checked="checked" id="color_green">
+            <span class="checkmark color_green"></span>
+        </label>
+        <label class="container">
+            <input type="checkbox" checked="checked" id="color_blue">
+            <span class="checkmark color_blue"></span>
+        </label>
+    </div>
+
+    <main>
+        <canvas></canvas>
+    </main>
+
+    <div class="footer_bar">
+        <button><label>Save</label></button>
+        <button onclick="generate_noise()"><label>Generate</label></button>
+        <button><label>Source Code</label></button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
